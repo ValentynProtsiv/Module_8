@@ -2,7 +2,7 @@ public abstract class Shape{
     public abstract String getName();
 }
 class Circle extends Shape {
-    private String name;
+    private final String name;
     public Circle(String name) {
         this.name = name;
     }
@@ -12,7 +12,7 @@ class Circle extends Shape {
     }
 }
 class Square extends Shape {
-    private String name;
+    private final String name;
     public Square(String name) {
         this.name = name;
     }
@@ -22,7 +22,7 @@ class Square extends Shape {
     }
 }
 class Triangle extends Shape {
-    private String name;
+    private final String name;
     public Triangle(String name) {
         this.name = name;
     }
@@ -32,7 +32,7 @@ class Triangle extends Shape {
     }
 }
 class Rectangle extends Shape {
-    private String name;
+    private final String name;
     public Rectangle(String name) {
         this.name = name;
     }
@@ -42,7 +42,7 @@ class Rectangle extends Shape {
     }
 }
 class Quad extends Shape{
-    private String name;
+    private final String name;
     public Quad(String name) {
         this.name = name;
     }
