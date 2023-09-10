@@ -1,51 +1,74 @@
-interface GettingName{
-    String getName();
-}
-
-public abstract class Shape implements  GettingName{
-
-    public String getName(){
-        return "shape";
-    }
+public abstract class Shape{
+    public abstract String getName();
 }
 class Circle extends Shape {
-    public String getName(){
-        return "circle";
+    private String name;
+    public Circle(String name) {
+        this.name = name;
+    }
+    @Override
+    public String getName() {
+        return name;
     }
 }
-class Quad extends Shape {
-    public String getName(){
-        return "quad";
+class Square extends Shape {
+    private String name;
+    public Square(String name) {
+        this.name = name;
+    }
+    @Override
+    public String getName() {
+        return name;
     }
 }
-class Triangle extends Shape{
-    public String getName(){
-        return "triangle";
+class Triangle extends Shape {
+    private String name;
+    public Triangle(String name) {
+        this.name = name;
+    }
+    @Override
+    public String getName() {
+        return name;
     }
 }
-class Rectangle extends Shape{
-    public String getName(){
-        return "rectangle";
+class Rectangle extends Shape {
+    private String name;
+    public Rectangle(String name) {
+        this.name = name;
+    }
+    @Override
+    public String getName() {
+        return name;
     }
 }
-class Square extends Shape{
-    public String getName(){
-        return "square";
+class Quad extends Shape{
+    private String name;
+    public Quad(String name) {
+        this.name = name;
+    }
+    @Override
+    public String getName() {
+        return name;
     }
 }
+class ShapePrinter{
+        public void printShape(Shape shape){
+            System.out.println(shape.getName());
+        }
 
-class Launcher {
     public static void main(String[] args) {
-          Circle circle = new Circle();
-          Quad quad = new Quad();
-          Triangle triangle = new Triangle();
-          Rectangle rectangle = new Rectangle();
-          Square square = new Square();
+        ShapePrinter shapePrinter = new ShapePrinter();
 
-          System.out.println(circle.getName());
-          System.out.println(quad.getName());
-          System.out.println(triangle.getName());
-          System.out.println(rectangle.getName());
-          System.out.println(square.getName());
+        Circle circle = new Circle("Circle");
+        Square square = new Square("Square");
+        Triangle triangle = new Triangle("Triangle");
+        Rectangle rectangle = new Rectangle("Rectangle");
+        Quad quad = new Quad("Quad");
+
+        shapePrinter.printShape(circle);
+        shapePrinter.printShape(square);
+        shapePrinter.printShape(triangle);
+        shapePrinter.printShape(rectangle);
+        shapePrinter.printShape(quad);
     }
 }
